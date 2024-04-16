@@ -8,8 +8,4 @@ class Patient {
     public void setAssignedPlan(int plan) {
         this.assignedPlan = plan; // Присваиваем значение параметра plan текущего объекта класса "Пациент"
     }
-
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor; // Присваиваем значение параметра doctor текущего объекта класса "Пациент"
-    }
 }
