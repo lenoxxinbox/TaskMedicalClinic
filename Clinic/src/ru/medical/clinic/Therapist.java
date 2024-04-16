@@ -4,20 +4,15 @@ package ru.medical.clinic;
 class Therapist extends Doctor {
 
     // Создаем метод "Назначить доктора"
-    public void assignDoctor() {
-        Patient patient = new Patient(); // Создаем новый объект класса "Пациент"
-        Surgeon surgeon = new Surgeon();
-        Dentist dentist = new Dentist();
-        Therapist therapist = new Therapist();
+    public void assignDoctor(Patient patient) {
 
         if (patient.assignedPlan == 1) { // Если назначен план, равный 1, то назначить врачом Хирурга
-            patient.setDoctor(surgeon);
+//            patient.setDoctor(new Surgeon());
         } else if (patient.assignedPlan == 2) { // Если назначен план, равный 2, то назначить врачом Дантиста
-            patient.setDoctor(dentist);
+//            patient.setDoctor(new Dentist());
         } else { // Во всех остальных случаях, если назначен план, не равный 1 или 2, то назначить врачом Терапевта
-            patient.setDoctor(therapist);
+//            patient.setDoctor(this);
         }
-//        System.out.println(patient.doctor);
         patient.doctor.toHeal(); // После назначения врача в соответствии с планом вызываем у назначенного врача метод "Лечить"
     }
 
